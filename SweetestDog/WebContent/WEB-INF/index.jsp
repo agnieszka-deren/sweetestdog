@@ -13,31 +13,8 @@
 <title>TheSweetestDog</title>
 </head>
 <body>
-    <nav class ="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <a href="#" class="navbar-brand"><b>The Sweetest Dog</b></a>
-        <p class="navbar-text">photos make you smile</p>
-         
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-          <span class="glyphicon glyphicon-list"></span>
-        </button>
-	<div class="collapse navbar-collapse navHeaderCollapse"> 
-	<ul class="nav navbar-nav navbar-right">
-		<li><a href="">Główna</a></li>
-		<!--  <li><a href="">Poczekalnia</a></li> -->
-		<li><a href="${pageContext.request.contextPath}/add">Dodaj</a></li>
-		<c:choose>
-                <c:when test="${not empty sessionScope.user}">
-                    <li><a href="logout">Wyloguj się</a></li>
-                </c:when>
-                <c:otherwise>
-                    <li><a href="login">Zaloguj się</a></li>
-                </c:otherwise>
-            </c:choose>
-	</ul>
-	</div>
-	</div>
-	</nav>
+
+<jsp:include page="navfoot/navbar.jspf" />
 	
 <c:if test="${not empty requestScope.photos}">
 	 <c:forEach var="photo" items="${requestScope.photos}">
@@ -61,12 +38,7 @@
    </c:forEach>
  </c:if>  
 
-
-<footer class="footer" >
-<div class="container">
-<p class="navbar-text"> Created by AgnieszkaDeren</p>
-</div>
-</footer>
+   <jsp:include page="navfoot/footer.jspf" />
 
  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

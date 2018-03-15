@@ -17,7 +17,7 @@ public class AddPhotoController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 if(request.getUserPrincipal() != null) {
-	            request.getRequestDispatcher("newphoto.jsp").forward(request, response);
+	            request.getRequestDispatcher("WEB-INF/newphoto.jsp").forward(request, response);
 	        } else {
 	            response.sendError(403);
 	        }

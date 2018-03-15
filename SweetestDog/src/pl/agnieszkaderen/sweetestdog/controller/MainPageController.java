@@ -20,7 +20,7 @@ public class MainPageController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		savePhotosInRequest(request);
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/index.jsp").forward(request, response);
 	}
 		
     private void savePhotosInRequest(HttpServletRequest request) {

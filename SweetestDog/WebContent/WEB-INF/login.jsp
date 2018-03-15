@@ -10,24 +10,9 @@
 <title>Login</title>
 </head>
 <body>
-    <nav class ="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <a href="#" class="navbar-brand"><b>The Sweetest Dog</b></a>
-        <p class="navbar-text">photos make you smile</p>
-         
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-          <span class="glyphicon glyphicon-list"></span>
-        </button>
-	<div class="collapse navbar-collapse navHeaderCollapse"> 
-	<ul class="nav navbar-nav navbar-right">
-		<li><a href="">Główna</a></li>
-		<!--  <li><a href="">Poczekalnia</a></li> -->
-		<li><a href="">Dodaj</a></li>
-		<li><a href="">Zaloguj</a></li>
-	</ul>
-	</div>
-	</div>
-	</nav>
+
+   <jsp:include page="navfoot/navbar.jspf" />
+   
 		<div class="container">
 			<div class="col-sm-6 col-md-4 col-md-offset-4">
 				  <form class="form-signin" action="j_security_check" method="post">
@@ -42,11 +27,7 @@
 			</div>
 		</div>
 
-<footer class="footer" >
-<div class="container">
-<p class="navbar-text"> Created by AgnieszkaDeren</p>
-</div>
-</footer>
+   <jsp:include page="navfoot/footer.jspf" />
    
    
    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
